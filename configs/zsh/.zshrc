@@ -9,4 +9,4 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshrc" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshrc"
 fi
 
-[[ ! -s "${ZDOTDIR:-$HOME}/.p10k.zsh" ]] || source "${ZDOTDIR:-$HOME}/.p10k.zsh"
+[[ ! -s "${ZDOTDIR:-$HOME}/conf.d/.p10k.zsh" ]] || source "${ZDOTDIR:-$HOME}/conf.d/.p10k.zsh"
