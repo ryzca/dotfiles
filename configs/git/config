@@ -1,0 +1,25 @@
+[core]
+	autocrlf = false
+	quotepath = false
+	ignorecase = false
+	editor = vim
+[user]
+	useConfigOnly = true
+[commit]
+	verbose = true
+[fetch]
+	prune = true
+[pull]
+	ff = only
+[merge]
+	ff = false
+[push]
+	default = current
+[diff]
+	tool = default-difftool
+	algorithm = histogram
+	colorMoved = dimmed-zebra
+[difftool "default-difftool"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[include]
+	path = config.local

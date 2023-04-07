@@ -1,17 +1,20 @@
 #!/bin/zsh
 
-DOTFILES_DIR="$(cd $(dirname $0); cd ..; pwd)"
-RUN_DATE=$(date '+%Y%m%d_%H%M%S')
+set -eu
 
-source "${DOTFILES_DIR}/configs/zsh/.zshenv"
+: $1 $2
 
-print -P "%F{117}==> Backing up zsh profiles%f"
-cd ${HOME}
-mkdir -p "${BACKUP_DIR_ZSH:="${XDG_CONFIG_HOME}/.zsh.bak.${RUN_DATE}"}" && \
-  mv -fv zshmv .zlogin .zlogout .zprofile .zshenv .zshrc .zsh_history .zsh_sessions .zprezto .zpreztorc "${BACKUP_DIR_ZSH}" 2> /dev/null
+SCRIPT_DIR="$(cd $(dirname $0); pwd)"
+RUN_TARGET="$1"
+RUN_DATETIME="$2"
+source "${SCRIPT_DIR}/common.zsh"
+BACKUP_DIR_BASE="${XDG_CONFIG_HOME}/.bak/${RUN_DATETIME}"
+BACKUP_DIR="${BACKUP_DIR_BASE}/${RUN_TARGET}"
 
-print -P "%F{117}==> Creating symlink for .zshenv%f"
-ln -fnsv "${DOTFILES_DIR}/configs/zsh/.zshenv" "${HOME}/.zshenv"
+mkdir -p "${BACKUP_DIR}"
+LOG_FILE="${BACKUP_DIR_BASE}/init.log"
 
-print -P "%F{117}==> Creating symlink for ZDOTDIR%f"
-ln -fnsv "${DOTFILES_DIR}/configs/zsh" "${ZDOTDIR}"
+echo "-------------------------" | tee -a "${LOG_FILE}"
+print -P "%F{112}Starting ${RUN_TARGET} setup.%f" | tee -a "${LOG_FILE}"
+{{ source "${SCRIPT_DIR}/init_$1.zsh" | tee -a "${LOG_FILE}"; } 3>&2 2>&1 1>&3 } | tee -a "${LOG_FILE}" 3>&2 2>&1 1>&3
+print -P "%F{112}Finished! Log file has been output to ${LOG_FILE}%f" | tee -a "${LOG_FILE}"

@@ -1,0 +1,21 @@
+# common
+.DS_Store
+._*
+.*.swp
+
+# vscode
+.vscode/
+
+# nodejs
+node_modules/
+
+# python
+__pycache__/
+
+# ruby
+/.bundle/
+/vendor/bundle
+
+# etc
+tmp/
+*.log
