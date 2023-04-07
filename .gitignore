@@ -1,4 +1,2 @@
 *.local
 !local.*.sample
-
-.zsh_*
