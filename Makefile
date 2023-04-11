@@ -3,7 +3,7 @@ RUN_DATETIME := $(shell date '+%Y%m%d_%H%M%S')
 none:
 	@echo "Please specify one or more targets."
 
-all: zsh git
+all: zsh git vim
 
 zsh:
 	@.bin/init.zsh zsh "${RUN_DATETIME}"
@@ -11,4 +11,7 @@ zsh:
 git:
 	@.bin/init.zsh git "${RUN_DATETIME}"
 
-.PHONY: all zsh git
+vim:
+	@.bin/init.zsh vim "${RUN_DATETIME}"
+
+.PHONY: all zsh git vim

@@ -10,3 +10,5 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/runcoms/zshrc" ]]; then
 fi
 
 [[ ! -s "${ZDOTDIR:-$HOME}/conf.d/.p10k.zsh" ]] || source "${ZDOTDIR:-$HOME}/conf.d/.p10k.zsh"
+
+export VIMINIT="set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/.vimrc"

@@ -50,8 +50,9 @@ log "-------------------------" "" true
 log "Starting ${RUN_TARGET} setup" "info" true
 log "" "" true
 source "${SCRIPT_DIR}/init_$1.zsh" 2>&1 | tee -a "${LOG_FILE}"
+EXIT_CODE="${pipestatus[1]}"
 log "" "" true
-if [[ "${pipestatus[1]}" == 0 ]]; then
+if [[ "${EXIT_CODE}" == 0 ]]; then
   log "Finished! ${RUN_TARGET} setup completed." "info" true
 else
   log "Please check the error message and try again." "error" true
