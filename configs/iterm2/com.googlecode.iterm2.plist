@@ -487,7 +487,7 @@
 			<key>ASCII Ligatures</key>
 			<false/>
 			<key>Ambiguous Double Width</key>
-			<false/>
+			<true/>
 			<key>Ansi 0 Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -1153,6 +1153,8 @@
 			<string>xterm-256color</string>
 			<key>Transparency</key>
 			<real>0.45000000000000001</real>
+			<key>Unicode Normalization</key>
+			<integer>0</integer>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
