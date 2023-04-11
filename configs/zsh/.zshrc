@@ -12,3 +12,7 @@ fi
 [[ ! -s "${ZDOTDIR:-$HOME}/conf.d/.p10k.zsh" ]] || source "${ZDOTDIR:-$HOME}/conf.d/.p10k.zsh"
 
 export VIMINIT="set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/.vimrc"
+
+export SQLITE_HISTORY="$XDG_STATE_HOME/sqlite_history"
+export MYSQL_HISTFILE="$XDG_STATE_HOME/mysql_history"
+export PSQL_HISTORY="$XDG_STATE_HOME/psql_history"
