@@ -15,34 +15,34 @@ mkdir -p "${BACKUP_DIR}"
 LOG_FILE="${BACKUP_DIR_BASE}/init.log"
 
 log() {
-  local MSG="$1"
-  local LEVEL="${2:-""}"
-  local LOG_TO_FILE="${3:-""}"
-  local SUFFIX="%f"
+  local msg="$1"
+  local level="${2:-""}"
+  local log_to_file="${3:-""}"
+  local suffix="%f"
 
-  case "${LEVEL}" in
+  case "${level}" in
     notice)
-      local PREFIX="%F{117}%B"
-      SUFFIX="%b${SUFFIX}"
+      local prefix="%F{117}%B"
+      suffix="%b${suffix}"
       ;;
     info)
-      local PREFIX="%F{114}"
+      local prefix="%F{114}"
       ;;
     warn)
-      local PREFIX="%F{220}"
+      local prefix="%F{220}"
       ;;
     error)
-      local PREFIX="%F{202}"
+      local prefix="%F{202}"
       ;;
     *)
-      local PREFIX="%F{252}"
+      local prefix="%F{252}"
       ;;
   esac
 
-  if [[ ${LOG_TO_FILE} ]]; then
-    print -P "${PREFIX}${MSG}${SUFFIX}" | tee -a "${LOG_FILE}"
+  if [[ ${log_to_file} ]]; then
+    print -P "${prefix}${msg}${suffix}" | tee -a "${LOG_FILE}"
   else
-    print -P "${PREFIX}${MSG}${SUFFIX}"
+    print -P "${prefix}${msg}${suffix}"
   fi
 }
 
@@ -50,9 +50,9 @@ log "-------------------------" "" true
 log "Starting ${RUN_TARGET} setup" "info" true
 log "" "" true
 source "${SCRIPT_DIR}/init_$1.zsh" 2>&1 | tee -a "${LOG_FILE}"
-EXIT_CODE="${pipestatus[1]}"
+exit_code="${pipestatus[1]}"
 log "" "" true
-if [[ "${EXIT_CODE}" == 0 ]]; then
+if [[ "${exit_code}" == 0 ]]; then
   log "Finished! ${RUN_TARGET} setup completed." "info" true
 else
   log "Please check the error message and try again." "error" true

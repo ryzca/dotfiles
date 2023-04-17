@@ -6,7 +6,6 @@ source "${ZINIT[HOME_DIR]}/bin/zinit.zsh"
 zinit light-mode depth"1" for \
     @"romkatv/powerlevel10k"
 
-
 _atinit_environment() {
     zstyle ':prezto:*:*' color 'yes'
     zstyle ":prezto:environment:termcap" color "yes"
@@ -39,5 +38,16 @@ export SQLITE_HISTORY="${XDG_STATE_HOME}/sqlite_history"
 export MYSQL_HISTFILE="${XDG_STATE_HOME}/mysql_history"
 export PSQL_HISTORY="${XDG_STATE_HOME}/psql_history"
 
+# export ASDF_CONFIG_FILE="${XDG_CONFIG_HOME}/asdf/asdfrc"
+# export ASDF_DIR="${XDG_DATA_HOME}/asdf"
+# export ASDF_DATA_DIR="${XDG_DATA_HOME}/asdf"
+
+
+# export NODE_REPL_HISTORY="$XDG_STATE_HOME/node_history"
+
+# source $(brew --prefix asdf)/libexec/asdf.sh
+
 source "${ZDOTDIR:-$HOME}/conf.d/completions.zsh"
+source "${ZDOTDIR:-$HOME}/conf.d/utils.zsh"
+
 zpcompinit
