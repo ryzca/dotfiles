@@ -29,7 +29,7 @@ zinit wait lucid blockf light-mode for \
     @"zsh-users/zsh-autosuggestions" \
     @"zsh-users/zsh-completions"
 
-[[ ! -s "${ZDOTDIR:-$HOME}/conf.d/.p10k.zsh" ]] || source "${ZDOTDIR:-$HOME}/conf.d/.p10k.zsh"
+[[ ! -s "${ZDOTDIR:-$HOME}/conf.d/p10k.zsh" ]] || source "${ZDOTDIR:-$HOME}/conf.d/p10k.zsh"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=244'
 
 export VIMINIT="set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/.vimrc"
