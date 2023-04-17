@@ -7,5 +7,5 @@
 ## Installation
 
 ```sh
-git clone https://github.com/ryzca/dotfiles.git ~/dotfiles --recursive
+git clone https://github.com/ryzca/dotfiles.git ~/dotfiles
 ```
