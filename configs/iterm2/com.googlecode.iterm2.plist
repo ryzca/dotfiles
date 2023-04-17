@@ -487,7 +487,7 @@
 			<key>ASCII Ligatures</key>
 			<false/>
 			<key>Ambiguous Double Width</key>
-			<true/>
+			<false/>
 			<key>Ansi 0 Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -1161,6 +1161,8 @@
 			<true/>
 			<key>Use Bright Bold</key>
 			<true/>
+			<key>Use Custom Tab Title</key>
+			<false/>
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
