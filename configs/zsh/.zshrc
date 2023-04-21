@@ -7,7 +7,7 @@ zinit light-mode depth"1" for \
     @"romkatv/powerlevel10k"
 
 _atinit_environment() {
-    zstyle ':prezto:*:*' color 'yes'
+    zstyle ":prezto:*:*" color "yes"
     zstyle ":prezto:environment:termcap" color "yes"
 }
 _atinit_history() {
@@ -15,13 +15,17 @@ _atinit_history() {
     zstyle ":prezto:module:history" histsize 10000
     zstyle ":prezto:module:history" savehist 10000
 }
+_atinit_utility() {
+    zstyle ":prezto:module:utility:ls" dirs-first "no"
+}
 
 zinit is-snippet for \
-    atinit'_atinit_environment' PZTM::environment \
-    atinit'_atinit_history' PZTM::history \
+    atinit"_atinit_environment" PZTM::environment \
+    atinit"_atinit_history" PZTM::history \
     PZTM::directory \
     PZTM::spectrum \
-    PZTM::utility
+    PZTM::gnu-utility \
+    atinit"_atinit_utility" PZTM::utility
 
 zinit wait lucid blockf light-mode for \
     @"zdharma-continuum/fast-syntax-highlighting" \
@@ -38,16 +42,11 @@ export SQLITE_HISTORY="${XDG_STATE_HOME}/sqlite_history"
 export MYSQL_HISTFILE="${XDG_STATE_HOME}/mysql_history"
 export PSQL_HISTORY="${XDG_STATE_HOME}/psql_history"
 
-# export ASDF_CONFIG_FILE="${XDG_CONFIG_HOME}/asdf/asdfrc"
-# export ASDF_DIR="${XDG_DATA_HOME}/asdf"
-# export ASDF_DATA_DIR="${XDG_DATA_HOME}/asdf"
-
-
-# export NODE_REPL_HISTORY="$XDG_STATE_HOME/node_history"
-
-# source $(brew --prefix asdf)/libexec/asdf.sh
-
 source "${ZDOTDIR:-$HOME}/conf.d/completions.zsh"
 source "${ZDOTDIR:-$HOME}/conf.d/utils.zsh"
+
+if [ -f "$ZDOTDIR/.zshrc.local" ]; then
+    source "$ZDOTDIR/.zshrc.local"
+fi
 
 zpcompinit
