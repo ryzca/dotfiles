@@ -43,7 +43,6 @@ export MYSQL_HISTFILE="${XDG_STATE_HOME}/mysql_history"
 export PSQL_HISTORY="${XDG_STATE_HOME}/psql_history"
 
 source "${ZDOTDIR:-$HOME}/conf.d/completions.zsh"
-source "${ZDOTDIR:-$HOME}/conf.d/utils.zsh"
 
 if [ -f "$ZDOTDIR/.zshrc.local" ]; then
     source "$ZDOTDIR/.zshrc.local"
