@@ -15,6 +15,9 @@ git:
 vim:
 	@.bin/init.zsh vim "${RUN_DATETIME}"
 
+mise:
+	@.bin/init.zsh mise "${RUN_DATETIME}"
+
 misc:
 	@.bin/init.zsh misc "${RUN_DATETIME}"
 

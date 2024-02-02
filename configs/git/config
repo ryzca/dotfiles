@@ -23,3 +23,5 @@
 	cmd = code --wait --diff $LOCAL $REMOTE
 [include]
 	path = config.local
+[ghq]
+	root = ~/dev

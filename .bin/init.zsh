@@ -46,6 +46,14 @@ log() {
   fi
 }
 
+backup() {
+  setopt nonomatch
+  set +e
+  mv -fv $@ "${BACKUP_DIR}" 2> /dev/null
+  set -e
+  unsetopt nonomatch
+}
+
 log "-------------------------" "" true
 log "Starting ${RUN_TARGET} setup" "info" true
 log "" "" true

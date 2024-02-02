@@ -36,16 +36,25 @@ zinit wait lucid blockf light-mode for \
 [[ ! -s "${ZDOTDIR:-$HOME}/conf.d/p10k.zsh" ]] || source "${ZDOTDIR:-$HOME}/conf.d/p10k.zsh"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=244"
 
+## Vim
 export VIMINIT="set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/.vimrc"
 
+## mise
+eval "$(mise activate zsh)"
+
+## npm
+export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}/npm/npmrc"
+
+## RDBMS
 export SQLITE_HISTORY="${XDG_STATE_HOME}/sqlite_history"
 export MYSQL_HISTFILE="${XDG_STATE_HOME}/mysql_history"
 export PSQL_HISTORY="${XDG_STATE_HOME}/psql_history"
 
 source "${ZDOTDIR:-$HOME}/conf.d/completions.zsh"
+source "${ZDOTDIR:-$HOME}/conf.d/utils.zsh"
 
-if [ -f "$ZDOTDIR/.zshrc.local" ]; then
-    source "$ZDOTDIR/.zshrc.local"
+if [ -f "${ZDOTDIR}/.zshrc.local" ]; then
+    source "${ZDOTDIR}/.zshrc.local"
 fi
 
 zpcompinit
