@@ -42,6 +42,9 @@ export VIMINIT="set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/.vimrc"
 ## mise
 eval "$(mise activate zsh)"
 
+# Node.js
+export NODE_REPL_HISTORY="$XDG_STATE_HOME/node_history"
+
 ## npm
 export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}/npm/npmrc"
 
