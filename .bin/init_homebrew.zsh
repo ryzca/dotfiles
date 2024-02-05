@@ -15,5 +15,8 @@ fi
 log "==> Updating Homebrew" "notice"
 brew update
 
+log "==> Installing CLt" "notice"
+xcode-select --install
+
 log "==> Installing Homebrew apps (formula & cask)" "notice"
 brew bundle install --file=${DOTFILES_CONFIGS}/homebrew/Brewfile --verbose --no-lock
