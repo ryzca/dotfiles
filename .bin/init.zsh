@@ -8,7 +8,7 @@ SCRIPT_DIR="$(cd $(dirname $0); pwd)"
 RUN_TARGET="$1"
 RUN_DATETIME="$2"
 source "${SCRIPT_DIR}/common.zsh"
-BACKUP_DIR_BASE="${XDG_CONFIG_HOME}/.dotfilesbak/${RUN_DATETIME}"
+BACKUP_DIR_BASE="${DOTFILES_HOME}/.bak/${RUN_DATETIME}"
 BACKUP_DIR="${BACKUP_DIR_BASE}/${RUN_TARGET}"
 
 mkdir -p "${BACKUP_DIR}"
