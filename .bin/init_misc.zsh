@@ -2,6 +2,13 @@
 
 cd ${HOME}
 
+log "==> Create dev directory" "notice"
+mkdir -vp "${HOME}/dev/_arch"
+mkdir -vp "${HOME}/dev/res/configs"
+mkdir -vp "${HOME}/dev/res/docs"
+mkdir -vp "${HOME}/dev/res/libs"
+mkdir -vp "${HOME}/dev/res/scripts"
+
 setopt nonomatch
 set +e
 log "==> Backing up SQLite history" "notice"
