@@ -1,6 +1,7 @@
 [user]
 	name = Ryz
 	email = 35394584+ryzca@users.noreply.github.com
-
 [ghq]
+	root = ~/Documents/notes
+	root = ~/dev/proj
 	user = ryzca
