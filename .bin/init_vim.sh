@@ -1,14 +1,10 @@
-#!/bin/zsh
+#!/bin/bash
 
 cd ${HOME}
-log "==> Backing up vim configs" "notice"
 
-setopt nonomatch
-set +e
-mv -fv .vim* "${BACKUP_DIR}" 2> /dev/null
-mv -fv "${XDG_CONFIG_HOME}/vim" "${BACKUP_DIR}" 2> /dev/null
-set -e
-unsetopt nonomatch
+log "==> Backing up vim configs" "notice"
+backup .vim*
+backup "${XDG_CONFIG_HOME}/vim"
 
 log "==> Creating symlink for vim config" "notice"
 ln -fnsv "${DOTFILES_CONFIGS}/vim" "${XDG_CONFIG_HOME}/vim"

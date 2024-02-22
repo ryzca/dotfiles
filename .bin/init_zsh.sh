@@ -1,12 +1,10 @@
-#!/bin/zsh
+#!/bin/bash
 
 cd ${HOME}
-log "==> Backing up zsh profiles" "notice"
 
-set +e
-mv -fv zshmv .zlogin .zlogout .zprofile .zshenv .zshrc .zsh_history .zsh_sessions .zprezto .zpreztorc .zcompdump "${BACKUP_DIR}" 2> /dev/null
-mv -fv "${XDG_CONFIG_HOME}/zsh" "${BACKUP_DIR}" 2> /dev/null
-set -e
+log "==> Backing up zsh profiles" "notice"
+backup zshmv .zlogin .zlogout .zprofile .zshenv .zshrc .zsh_history .zsh_sessions .zprezto .zpreztorc .zcompdump
+backup "${XDG_CONFIG_HOME}/zsh"
 
 log "==> Creating symlink for .zshenv" "notice"
 ln -fnsv "${ZDOTDIR}/.zshenv" "${HOME}/.zshenv"

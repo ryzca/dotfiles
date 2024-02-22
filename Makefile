@@ -1,7 +1,7 @@
 RUN_DATETIME := $(shell date '+%Y%m%d_%H%M%S')
 
 define run
-	@.bin/init.zsh $(1) "${RUN_DATETIME}"
+	@.bin/init.sh $(1) "${RUN_DATETIME}"
 endef
 
 none:
@@ -27,4 +27,4 @@ mise:
 misc:
 	$(call run,misc)
 
-.PHONY: all homebrew zsh git vim mise misc
+.PHONY: all homebrew zsh git vim mise

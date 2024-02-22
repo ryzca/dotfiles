@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 if [ "$(uname)" != "Darwin" ]; then
   log "Aborted. Homebrew installation is only for macOS." "error"

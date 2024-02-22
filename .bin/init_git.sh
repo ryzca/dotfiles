@@ -1,15 +1,11 @@
-#!/bin/zsh
+#!/bin/bash
 
 cd ${HOME}
-log "==> Backing up git configs" "notice"
 
-setopt nonomatch
-set +e
-mv -fv .git* "${BACKUP_DIR}" 2> /dev/null
-mv -fv ${XDG_CONFIG_HOME}/git/config.local "${BACKUP_DIR}" 2> /dev/null
-mv -fv ${XDG_CONFIG_HOME}/git "${BACKUP_DIR}" 2> /dev/null
-set -e
-unsetopt nonomatch
+log "==> Backing up git configs" "notice"
+backup .git*
+backup ${XDG_CONFIG_HOME}/git/config.local
+backup ${XDG_CONFIG_HOME}/git
 
 log "==> Creating symlink for git config" "notice"
 ln -fnsv "${DOTFILES_CONFIGS}/git" "${XDG_CONFIG_HOME}/git"
