@@ -1,8 +1,8 @@
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "sanemat/font"
-
 brew "coreutils"
+brew "openssl@3"
 brew "eza"
 brew "fontforge"
 brew "fzf"
@@ -15,8 +15,6 @@ brew "libyaml"
 brew "libzip"
 brew "mas"
 brew "mise"
-brew "openssl@3"
-brew "sanemat/font/ricty", args: ["with-patch-in-place", "with-powerline", "without-visible-space"]
 brew "vim"
 brew "watchman"
 
