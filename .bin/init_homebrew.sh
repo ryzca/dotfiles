@@ -1,5 +1,9 @@
 #!/bin/bash
 
+set -eu
+source "$(cd $(dirname $0); pwd)/common.sh"
+cd ${HOME}
+
 if [ "$(uname)" != "Darwin" ]; then
   log "Aborted. Homebrew installation is only for macOS." "error"
   exit 1

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+source "$(cd $(dirname $0); pwd)/common.sh"
 cd ${HOME}
 
 log "==> Backing up zsh profiles" "notice"
