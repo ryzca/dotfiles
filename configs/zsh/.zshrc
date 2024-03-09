@@ -43,15 +43,24 @@ export VIMINIT="set nocp | source ${XDG_CONFIG_HOME:-$HOME/.config}/vim/.vimrc"
 eval "$(mise activate zsh)"
 
 # Node.js
-export NODE_REPL_HISTORY="$XDG_STATE_HOME/node_history"
+export NODE_REPL_HISTORY="${XDG_STATE_HOME}/node_history"
 
 ## npm
 export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}/npm/npmrc"
+
+## Python
+export PYTHONSTARTUP="${XDG_CONFIG_HOME}/python/startup.py"
 
 ## RDBMS
 export SQLITE_HISTORY="${XDG_STATE_HOME}/sqlite_history"
 export MYSQL_HISTFILE="${XDG_STATE_HOME}/mysql_history"
 export PSQL_HISTORY="${XDG_STATE_HOME}/psql_history"
+
+fpath=(
+    "${XDG_DATA_HOME}/zinit/completions"(N-/)
+    "${XDG_DATA_HOME}/zsh/completions"(N-/)
+    "$fpath[@]"
+)
 
 source "${ZDOTDIR:-$HOME}/conf.d/completions.zsh"
 source "${ZDOTDIR:-$HOME}/conf.d/utils.zsh"

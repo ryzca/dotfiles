@@ -1,5 +1,3 @@
-fpath=(${XDG_DATA_HOME}/zinit/completions $fpath)
-
 ### ref: PZTM::completions ###
 # Options
 setopt COMPLETE_IN_WORD

@@ -1,3 +1,4 @@
 [tools]
 node = "latest"
 ruby = "latest"
+python = "latest"

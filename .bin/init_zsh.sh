@@ -12,6 +12,9 @@ ln -fnsv "${ZDOTDIR}/.zshenv" "${HOME}/.zshenv"
 log "==> Creating symlink for ZDOTDIR" "notice"
 ln -fnsv "${DOTFILES_CONFIGS}/zsh" "${ZDOTDIR}"
 
+log "==> Creating zsh directory" "notice"
+mkdir -vp "${XDG_DATA_HOME}/zsh/completions"
+
 log "==> Installing Zinit" "notice"
 if [ -d "${XDG_DATA_HOME}/zinit/bin" ]; then
     log "Aborted. Zinit repository already exists." "warn"
