@@ -30,6 +30,3 @@ ln -fnsv "${DOTFILES_CONFIGS}/python" "${XDG_CONFIG_HOME}/python"
 
 log "==> Installing modules from mise configs" "notice"
 mise install
-
-log "==> Generating mise completion file" "notice"
-mise completion -v zsh > ${ZSH_COMPlETIONS_DIR}/_mise

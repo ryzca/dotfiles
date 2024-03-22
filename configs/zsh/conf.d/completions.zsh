@@ -1,4 +1,12 @@
-### ref: PZTM::completions ###
+# Modified version of modules/completion/init.zsh from prezto
+# Original Copyright:
+#   Copyright (c) 2009-2011 Robby Russell and contributors
+#   Copyright (c) 2011-2017 Sorin Ionescu and contributors
+# Modifications by @ryzca in 2024
+#
+# Original and modified versions are under the MIT License.
+# https://opensource.org/licenses/mit
+
 # Options
 setopt COMPLETE_IN_WORD
 setopt ALWAYS_TO_END

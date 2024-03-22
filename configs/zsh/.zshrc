@@ -58,7 +58,7 @@ export PSQL_HISTORY="${XDG_STATE_HOME}/psql_history"
 
 fpath=(
     "${XDG_DATA_HOME}/zinit/completions"(N-/)
-    "${XDG_DATA_HOME}/zsh/completions"(N-/)
+    "$(brew --prefix)/share/zsh/site-functions"(N-/)
     "$fpath[@]"
 )
 
