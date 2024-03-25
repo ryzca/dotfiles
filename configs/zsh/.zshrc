@@ -62,11 +62,19 @@ fpath=(
     "$fpath[@]"
 )
 
+zpcompinit
+
 source "${ZDOTDIR:-$HOME}/conf.d/completions.zsh"
+source "${ZDOTDIR:-$HOME}/conf.d/fzf.zsh"
 source "${ZDOTDIR:-$HOME}/conf.d/utils.zsh"
+
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
+add-zsh-hook chpwd chpwd_recent_dirs
+zstyle ':chpwd:*' recent-dirs-max 500
+zstyle ':chpwd:*' recent-dirs-default true
+zstyle ':chpwd:*' recent-dirs-insert true
+zstyle ':completion:*' recent-dirs-insert both
 
 if [ -f "${ZDOTDIR}/.zshrc.local" ]; then
     source "${ZDOTDIR}/.zshrc.local"
 fi
-
-zpcompinit

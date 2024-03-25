@@ -3,3 +3,4 @@
 *.bak
 
 .zcompdump
+.chpwd-recent-dirs
