@@ -1,4 +1,4 @@
 [tools]
 node = "latest"
-ruby = "latest"
+ruby = "3.3"
 python = "latest"

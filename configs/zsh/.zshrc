@@ -56,6 +56,11 @@ export SQLITE_HISTORY="${XDG_STATE_HOME}/sqlite_history"
 export MYSQL_HISTFILE="${XDG_STATE_HOME}/mysql_history"
 export PSQL_HISTORY="${XDG_STATE_HOME}/psql_history"
 
+## Ruby
+export BUNDLE_USER_HOME="${XDG_CONFIG_HOME}/bundle"
+export BUNDLE_USER_CACHE="${XDG_CACHE_HOME}/bundle"
+export BUNDLE_USER_PLUGIN="${XDG_DATA_HOME}/bundle"
+
 fpath=(
     "${XDG_DATA_HOME}/zinit/completions"(N-/)
     "$(brew --prefix)/share/zsh/site-functions"(N-/)
