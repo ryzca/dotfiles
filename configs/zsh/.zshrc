@@ -81,6 +81,7 @@ add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ':chpwd:*' recent-dirs-max 500
 zstyle ':chpwd:*' recent-dirs-default true
 zstyle ':chpwd:*' recent-dirs-insert true
+zstyle ':chpwd:*' recent-dirs-file "${XDG_STATE_HOME}/chpwd-recent-dirs"
 zstyle ':completion:*' recent-dirs-insert both
 
 if [ -f "${ZDOTDIR}/.zshrc.local" ]; then

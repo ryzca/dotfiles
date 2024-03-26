@@ -1,6 +1,3 @@
 *.local
 !local.*.sample
 *.bak
-
-.zcompdump
-.chpwd-recent-dirs
