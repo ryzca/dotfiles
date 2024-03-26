@@ -2,19 +2,26 @@
 .DS_Store
 ._*
 .*.swp
+.tool-versions
 
-# vscode
+# VSCode
 .vscode/
 
-# nodejs
+# Node.js
 node_modules/
 
-# python
+# Next.js
+.next
+
+# Python
 __pycache__/
 
-# ruby
+# Ruby
 /.bundle/
 /vendor/bundle
+
+# IntelliJ
+.idea
 
 # etc
 tmp/
