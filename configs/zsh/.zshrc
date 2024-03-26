@@ -61,6 +61,9 @@ export BUNDLE_USER_HOME="${XDG_CONFIG_HOME}/bundle"
 export BUNDLE_USER_CACHE="${XDG_CACHE_HOME}/bundle"
 export BUNDLE_USER_PLUGIN="${XDG_DATA_HOME}/bundle"
 
+## Bat
+export BAT_CONFIG_PATH="${XDG_CONFIG_HOME}/bat/config"
+
 fpath=(
     "${XDG_DATA_HOME}/zinit/completions"(N-/)
     "$(brew --prefix)/share/zsh/site-functions"(N-/)

@@ -17,3 +17,9 @@ log "==> Backing up MySQL history" "notice"
 backup .mysql_history
 log "==> Backing up psql history" "notice"
 backup .psql_history
+
+log "==> Backing up bat profiles" "notice"
+backup "${XDG_CONFIG_HOME}/bat"
+
+log "==> Creating symlink for bat config" "notice"
+ln -fnsv "${DOTFILES_CONFIGS}/bat" "${XDG_CONFIG_HOME}/bat"
