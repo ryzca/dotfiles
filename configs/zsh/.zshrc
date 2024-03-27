@@ -70,6 +70,16 @@ fpath=(
     "$fpath[@]"
 )
 
+alias eza='eza --icons'
+alias l='eza -1A'
+alias ll='eza -lh'
+alias lr='ll -T'
+alias la='ll -A'
+alias lk='ll --sort=size'
+alias lt='ll --sort=modified'
+alias lc='lt --changed'
+alias lu='lt -u'
+
 zpcompinit
 
 source "${ZDOTDIR:-$HOME}/conf.d/completions.zsh"
