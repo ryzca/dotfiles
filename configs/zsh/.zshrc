@@ -79,6 +79,7 @@ alias lk='ll --sort=size'
 alias lt='ll --sort=modified'
 alias lc='lt --changed'
 alias lu='lt -u'
+alias tree='eza -T'
 
 zpcompinit
 
