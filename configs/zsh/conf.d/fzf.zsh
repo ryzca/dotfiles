@@ -17,11 +17,11 @@ export FZF_DEFAULT_OPTS="
 export FZF_DEFAULT_COMMAND='fd --type file'
 
 function _fzf_cdr() {
-    target_dir="$(cdr -l | awk '{ print $2 }' | fzf --preview 'f() { sh -c "eza --icons --tree --level=2 --color=always $1" }; f {}')"
-    target_dir="$(echo ${target_dir/\~/${HOME}})"
-    if [[ -n "${target_dir}" ]]; then
-        cd "${target_dir}"
-    fi
+  target_dir="$(cdr -l | awk '{ print $2 }' | fzf --preview 'f() { sh -c "eza --icons --tree --level=2 --color=always $1" }; f {}')"
+  target_dir="$(echo ${target_dir/\~/${HOME}})"
+  if [[ -n "${target_dir}" ]]; then
+    cd "${target_dir}"
+  fi
 }
 
 function _fzf_branch() {
@@ -40,15 +40,15 @@ function _fzf_cd() {
   dir=$(fd --type d 2> /dev/null | fzf +m --preview 'f() { sh -c "eza --icons --tree --level=2 --color=always $1" }; f {}') && cd "${dir}"
 }
 
-function _ghq_fzf () {
-    local repo="$(ghq list | fzf --query="${LBUFFER}" --preview 'p="$(ghq list --full-path --exact {})";
-        [ -f "${p}/README.md" ] && bat --style=grid,header --color=always "${p}/README.md" || eza --icons --tree --level=2 --color=always "${p}"')"
-    if [[ -n "${repo}" ]]; then
-        repo="$(ghq list --full-path --exact ${repo})"
-        BUFFER="cd ${repo}"
-        zle accept-line
-    fi
-    zle clear-screen
+function _fzf_ghq() {
+  local repo="$(ghq list | fzf --query="${LBUFFER}" --preview 'p="$(ghq list --full-path --exact {})";
+    [ -f "${p}/README.md" ] && bat --style=grid,header --color=always "${p}/README.md" || eza --icons --tree --level=2 --color=always "${p}"')"
+  if [[ -n "${repo}" ]]; then
+    repo="$(ghq list --full-path --exact ${repo})"
+    BUFFER="cd ${repo}"
+    zle accept-line
+  fi
+  zle clear-screen
 }
 
 alias fcr="_fzf_cdr"
@@ -56,5 +56,5 @@ alias fbr="_fzf_branch"
 alias fh="_fzf_history"
 alias fcd="_fzf_cd"
 
-zle -N _ghq_fzf
-bindkey '^]' _ghq_fzf
+zle -N _fzf_ghq
+bindkey '^]' _fzf_ghq
