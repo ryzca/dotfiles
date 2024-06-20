@@ -8,7 +8,7 @@
 [commit]
 	verbose = true
 [fetch]
-	prune = true
+	prune = false
 [pull]
 	ff = only
 [merge]
@@ -25,3 +25,5 @@
 	path = config.local
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[alias]
+	clean-branch = "!git fetch -p && git branch --format '%(refname:short) %(upstream:track)' | grep '\\[gone\\]' | awk '{print $1}' | xargs git branch -D"
