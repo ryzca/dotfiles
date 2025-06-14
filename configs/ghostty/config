@@ -2,7 +2,35 @@ font-size = 16
 font-family = HackGen35 Console NF
 font-feature = -dlig
 
-theme = iceberg-dark
+# Color scheme based on iTerm2 Iceberg theme
+background = 111218
+foreground = c6c8cb
+
+# ANSI colors (0-7)
+palette = 0=#000000
+palette = 1=#df7f82
+palette = 2=#72a07c
+palette = 3=#f0aa7a
+palette = 4=#8badd4
+palette = 5=#ad9bdb
+palette = 6=#00bbbb
+palette = 7=#bbbbbb
+
+# Bright colors (8-15)
+palette = 8=#555555
+palette = 9=#ff5555
+palette = 10=#55ff55
+palette = 11=#ffff55
+palette = 12=#5555ff
+palette = 13=#ff55ff
+palette = 14=#55ffff
+palette = 15=#ffffff
+
+# Additional colors
+selection-background = 264670
+selection-foreground = 75a7d8
+cursor-color = c6c8cb
+
 background-opacity = 0.70
 
 initial-window = false
