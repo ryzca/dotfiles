@@ -7,7 +7,7 @@ endef
 none:
 	@echo "Please specify one or more targets."
 
-all: homebrew zsh git vim mise
+all: homebrew zsh git vim mise ghostty
 
 homebrew:
 	$(call run,homebrew)
@@ -24,7 +24,10 @@ vim:
 mise:
 	$(call run,mise)
 
+ghostty:
+	$(call run,ghostty)
+
 misc:
 	$(call run,misc)
 
-.PHONY: all homebrew zsh git vim mise
+.PHONY: all homebrew zsh git vim mise ghostty
