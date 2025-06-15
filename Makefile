@@ -30,6 +30,9 @@ ghostty:
 tmux:
 	$(call run,tmux)
 
+claude:
+	$(call run,claude)
+
 misc:
 	$(call run,misc)
 
