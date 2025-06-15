@@ -42,6 +42,7 @@ window-padding-balance = true
 shell-integration = zsh
 shell-integration-features = no-cursor
 cursor-style = block
+cursor-style-blink = true
 
 keybind = global:super+alt+t=toggle_quick_terminal
 
