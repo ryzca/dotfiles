@@ -28,3 +28,4 @@
 	insteadOf = https://github.com/
 [alias]
 	clean-branch = "!git fetch -p && git branch --format '%(refname:short) %(upstream:track)' | grep '\\[gone\\]' | awk '{print $1}' | xargs git branch -D"
+	wb = "!f() { if git show-ref --verify --quiet refs/heads/$1; then git worktree add ../$(basename $(git rev-parse --show-toplevel))-${1//\\//-} $1; else git worktree add -b $1 ../$(basename $(git rev-parse --show-toplevel))-${1//\\//-} ${2:-development}; fi; }; f"
