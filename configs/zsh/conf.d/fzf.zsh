@@ -51,10 +51,29 @@ function _fzf_ghq() {
   zle clear-screen
 }
 
+function _fzf_git_worktree() {
+  local selected full_path
+  selected=$(git worktree list | awk '{
+    branch = $NF
+    gsub(/[\[\]]/, "", branch)
+    print branch " " $0
+  }' | fzf --with-nth=1 --preview 'echo {} | awk "{print \$2}" | xargs -I path sh -c "cd path && git log --oneline --graph --decorate --color=always -10"')
+  if [[ -n "${selected}" ]]; then
+    full_path=$(echo "${selected}" | awk '{print $2}')
+    BUFFER="cd ${full_path}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+
 alias fcr="_fzf_cdr"
 alias fbr="_fzf_branch"
 alias fh="_fzf_history"
 alias fcd="_fzf_cd"
+alias fwt="_fzf_git_worktree"
 
 zle -N _fzf_ghq
 bindkey '^]' _fzf_ghq
+
+zle -N _fzf_git_worktree
+bindkey '^W' _fzf_git_worktree
