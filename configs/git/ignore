@@ -26,3 +26,5 @@ __pycache__/
 # etc
 tmp/
 *.log
+
+**/.claude/settings.local.json

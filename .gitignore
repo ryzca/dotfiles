@@ -3,3 +3,5 @@
 *.bak
 
 .zsh_sessions/
+
+configs/hub
