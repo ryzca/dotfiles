@@ -54,9 +54,9 @@ function _fzf_ghq() {
 function _fzf_git_worktree() {
   local selected full_path
   selected=$(git worktree list | awk '{
-    branch = $NF
-    gsub(/[\[\]]/, "", branch)
-    print branch " " $0
+    dir_name = $1
+    gsub(/.*\//, "", dir_name)
+    print dir_name " " $1
   }' | fzf --with-nth=1 --preview 'echo {} | awk "{print \$2}" | xargs -I path sh -c "cd path && git log --oneline --graph --decorate --color=always -10"')
   if [[ -n "${selected}" ]]; then
     full_path=$(echo "${selected}" | awk '{print $2}')
