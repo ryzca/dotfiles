@@ -96,6 +96,7 @@
   )
 
   typeset -g POWERLEVEL9K_VCS_BRANCH_ICON='\uF126 '
+  typeset -g POWERLEVEL9K_VCS_WORKTREE_ICON='\uF1BB'
 
   function my_git_formatter() {
     emulate -L zsh
@@ -141,11 +142,21 @@
 
     local res
 
+    # Check if we're in a git worktree
+    local is_worktree=false
+    if [[ -f .git && ! -d .git ]]; then
+      is_worktree=true
+    fi
+
     # Display branch always.
     if [[ -n $VCS_STATUS_LOCAL_BRANCH ]]; then
       local branch=${(V)VCS_STATUS_LOCAL_BRANCH}
       (( $#branch > 32 )) && branch[13,-13]="…"
       res+="${clean}${(g::)POWERLEVEL9K_VCS_BRANCH_ICON}${branch//\%/%%}"
+      # Only add worktree icon if we're actually in a worktree
+      if [[ $is_worktree == true ]]; then
+        res+=" %208F${(g::)POWERLEVEL9K_VCS_WORKTREE_ICON}%f"
+      fi
     fi
 
     # Show tracking branch name if it differs from local branch.
