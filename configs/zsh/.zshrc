@@ -64,6 +64,9 @@ export BUNDLE_USER_PLUGIN="${XDG_DATA_HOME}/bundle"
 ## Bat
 export BAT_CONFIG_PATH="${XDG_CONFIG_HOME}/bat/config"
 
+## Claude Code
+export CLAUDE_CONFIG_DIR="${XDG_CONFIG_HOME:-${HOME}/.config}/claude"
+
 fpath=(
     "${XDG_DATA_HOME}/zinit/completions"(N-/)
     "$(brew --prefix)/share/zsh/site-functions"(N-/)

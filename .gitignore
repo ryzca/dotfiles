@@ -6,3 +6,10 @@
 
 configs/hub
 configs/iterm2
+
+# Claude Code generated files
+configs/claude/.claude.json
+configs/claude/ide/
+configs/claude/projects/
+configs/claude/statsig/
+configs/claude/todos/
