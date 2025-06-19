@@ -50,7 +50,12 @@
       "Bash(git checkout:*)",
       "Bash(git pull:*)",
       "Bash(git add:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git worktree:*)",
+      "Bash(git wb:*)",
+      "Bash(git wd:*)"
     ],
     "deny": []
   }
