@@ -1,6 +1,11 @@
 {
   "permissions": {
     "allow": [
+      "Read(**)",
+      "Write(src/**)",
+      "Write(app/**)",
+      "Write(docs/**)",
+      "Write(_docs/**)",
       "Bash(echo:*)",
       "Bash(printf:*)",
       "Bash(pwd:*)",
@@ -39,10 +44,6 @@
       "Bash(netstat:*)",
       "Bash(ping:*)",
       "Bash(lsof:*)",
-      "Bash(rsync:*)",
-      "Bash(ssh:*)",
-      "Bash(curl:*)",
-      "Bash(wget:*)",
       "Bash(make:*)",
       "Bash(docker:*)",
       "Bash(docker-compose:*)",
@@ -51,13 +52,35 @@
       "Bash(git fetch:*)",
       "Bash(git pull:*)",
       "Bash(git add:*)",
-      "Bash(git push:*)",
       "Bash(git status:*)",
       "Bash(git log:*)",
       "Bash(git worktree:*)",
-      "Bash(git wb:*)",
-      "Bash(git wd:*)"
+      "Bash(git rev-parse:*)",
+      "Bash(git merge-base:*)",
+      "Bash(git wb:*)"
     ],
-    "deny": []
+    "deny": [
+      "Bash(sudo:*)",
+      "Bash(rm -rf:*)",
+      "Bash(git push:*)",
+      "Bash(git reset:*)",
+      "Bash(git rebase:*)",
+      "Read(.env.*)",
+      "Read(id_rsa)",
+      "Read(**/*token*)",
+      "Read(**/*key*)",
+      "Write(.env*)",
+      "Write(**/secrets/**)",
+      "Bash(rsync:*)",
+      "Bash(ssh:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(nc:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm remove:*)",
+      "Bash(psql:*)",
+      "Bash(mysql:*)",
+      "Bash(mongod:*)"
+    ]
   }
 }
