@@ -57,6 +57,7 @@
       "Bash(git worktree:*)",
       "Bash(git rev-parse:*)",
       "Bash(git merge-base:*)",
+      "Bash(git symbolic-ref:*)",
       "Bash(git wb:*)"
     ],
     "deny": [
