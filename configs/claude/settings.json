@@ -58,7 +58,11 @@
       "Bash(git rev-parse:*)",
       "Bash(git merge-base:*)",
       "Bash(git symbolic-ref:*)",
-      "Bash(git wb:*)"
+      "Bash(git wb:*)",
+      "Bash(gh repo view:*)",
+      "Bash(gh pr list:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh pr status:*)"
     ],
     "deny": [
       "Bash(sudo:*)",
