@@ -27,4 +27,6 @@ __pycache__/
 tmp/
 *.log
 
+# Claude Code
 **/.claude/settings.local.json
+_docs/
