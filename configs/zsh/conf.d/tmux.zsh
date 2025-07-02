@@ -4,7 +4,7 @@
 # Usage: tm [session_name]
 tm() {
     local session_name="${1:-$(basename "$PWD")}"
-    
+
     if tmux has-session -t "$session_name" 2>/dev/null; then
         echo "Attaching to existing session: $session_name"
         tmux attach-session -t "$session_name"
@@ -19,7 +19,7 @@ tm() {
 # Usage: tk [session_name]
 tk() {
     local session_name="${1:-$(basename "$PWD")}"
-    
+
     if tmux has-session -t "$session_name" 2>/dev/null; then
         tmux kill-session -t "$session_name"
         echo "Killed session: $session_name"
