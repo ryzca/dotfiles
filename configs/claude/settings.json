@@ -45,8 +45,6 @@
       "Bash(ping:*)",
       "Bash(lsof:*)",
       "Bash(make:*)",
-      "Bash(docker:*)",
-      "Bash(docker-compose:*)",
       "Bash(git commit:*)",
       "Bash(git checkout:*)",
       "Bash(git fetch:*)",
