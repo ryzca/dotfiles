@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "permissions": {
     "allow": [
       "Read(**)",
@@ -62,7 +63,15 @@
       "Bash(gh pr view:*)",
       "Bash(gh pr status:*)",
       "Bash(gh pr checkout:*)",
-      "Bash(gh pr diff:*)"
+      "Bash(gh pr diff:*)",
+      "Bash(pnpm lint:*)",
+      "mcp__serena__list_dir",
+      "mcp__serena__find_file",
+      "mcp__serena__find_symbol",
+      "mcp__serena__search_for_pattern",
+      "mcp__serena__check_onboarding_performed",
+      "mcp__serena__think_about_collected_information",
+      "Bash(obsidian-doc-sync:*)",
     ],
     "deny": [
       "Bash(sudo:*)",
