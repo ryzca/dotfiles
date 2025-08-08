@@ -13,3 +13,4 @@ configs/claude/ide/
 configs/claude/projects/
 configs/claude/statsig/
 configs/claude/todos/
+configs/claude/shell-snapshots/
