@@ -71,7 +71,7 @@
       "mcp__serena__search_for_pattern",
       "mcp__serena__check_onboarding_performed",
       "mcp__serena__think_about_collected_information",
-      "Bash(obsidian-doc-sync:*)",
+      "Bash(obsidian-doc-sync:*)"
     ],
     "deny": [
       "Bash(sudo:*)",
