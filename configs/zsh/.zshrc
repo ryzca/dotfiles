@@ -73,6 +73,11 @@ fpath=(
     "$fpath[@]"
 )
 
+path=(
+    ${HOME}/bin(N-/)
+    "$path[@]"
+)
+
 alias eza='eza --icons'
 alias l='eza -1A'
 alias ll='eza -lh'
