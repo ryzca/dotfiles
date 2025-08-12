@@ -35,7 +35,7 @@ description: "調査を行い、結果を文書化する"
 作成に失敗した場合は絶対に何もせず、対応を中断してください。
 
 ```
-obsidian-doc-sync {{プロジェクトのディレクトリ名}} create "$TITLE"
+obsidian-doc-sync create "$TITLE" $SLUG
 ```
 
 #### c. 文書に調査結果を追記
