@@ -1,5 +1,5 @@
 ---
-name: plan
+name: roadmap
 description: "実装や作業の計画を策定し、文書化する"
 --- 
 
@@ -37,6 +37,7 @@ description: "実装や作業の計画を策定し、文書化する"
 
 - $TITLE: 計画内容を示す端的な日本語
 - $SLUG: 計画文書のファイル名に使用する端的な英語 (例: `feature-implementation-plan`)
+- $DOC_PATH: 調査結果のファイルを最終的に格納する予定の相対ディレクトリパス (例: `docs/features/auth`)
 
 #### b. 文書の雛形を作成
 
@@ -44,10 +45,12 @@ description: "実装や作業の計画を策定し、文書化する"
 作成に失敗した場合は絶対に何もせず、対応を中断してください。
 
 ```
-obsidian-doc-sync create "$TITLE" $SLUG
+obsidian-doc-sync create "$TITLE" $SLUG $TITLE
 ```
 
 #### c. 文書に計画を追記
 
-作成した文書ファイルに以下の構成で計画を追記してください。
+作成した文書ファイルに計画内容を追記してください。
 フロントマターは変更しないでください。
+ファイル名を変更しないでください。
+ファイルの配置パスは変更しないでください。
