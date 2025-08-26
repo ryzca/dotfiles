@@ -45,7 +45,7 @@ description: "実装や作業の計画を策定し、文書化する"
 作成に失敗した場合は絶対に何もせず、対応を中断してください。
 
 ```
-obsidian-doc-sync create "$TITLE" $SLUG $TITLE
+obsidian-doc-sync create "$TITLE" $SLUG $DOC_PATH
 ```
 
 #### c. 文書に計画を追記
