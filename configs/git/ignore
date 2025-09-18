@@ -30,3 +30,4 @@ tmp/
 # Claude Code
 **/.claude/settings.local.json
 _docs/
+.serena
