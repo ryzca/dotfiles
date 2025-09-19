@@ -12,9 +12,10 @@ get_model_color() {
 
 get_percent_color() {
   local percent="$1"
-  ((percent >= 90)) && echo 167 || \
-  ((percent >= 60)) && echo 142 || \
-  echo 108 # red yellow green
+  if ((percent >= 90)); then echo 167  # red
+  elif ((percent >= 60)); then echo 142  # yellow
+  else echo 70  # green
+  fi
 }
 
 get_tokens() {
