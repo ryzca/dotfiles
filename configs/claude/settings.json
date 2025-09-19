@@ -98,5 +98,10 @@
       "Bash(mysql:*)",
       "Bash(mongod:*)"
     ]
+  },
+  "model": "opus",
+  "statusLine": {
+    "type": "command",
+    "command": "${CLAUDE_CONFIG_DIR}/statusline.sh"
   }
 }
