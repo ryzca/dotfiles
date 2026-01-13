@@ -9,8 +9,15 @@ configs/iterm2
 
 # Claude Code generated files
 configs/claude/.claude.json*
+configs/claude/history.jsonl
+configs/claude/stats-cache.json
 configs/claude/ide/
 configs/claude/projects/
 configs/claude/statsig/
 configs/claude/todos/
 configs/claude/shell-snapshots/
+configs/claude/file-history/
+configs/claude/debug/
+configs/claude/cache/
+configs/claude/plans/
+configs/claude/plugins/
