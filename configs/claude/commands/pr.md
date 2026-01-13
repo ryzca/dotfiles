@@ -1,5 +1,5 @@
 ---
-name: create-pr
+name: pr
 description: "プルリクエストを作成する"
 ---
 
