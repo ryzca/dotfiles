@@ -19,5 +19,10 @@ configs/claude/shell-snapshots/
 configs/claude/file-history/
 configs/claude/debug/
 configs/claude/cache/
+configs/claude/paste-cache/
+configs/claude/image-cache/
+configs/claude/tasks/
+configs/claude/telemetry/
+configs/claude/backups/
 configs/claude/plans/
 configs/claude/plugins/
