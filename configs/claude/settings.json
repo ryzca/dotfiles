@@ -65,6 +65,8 @@
       "Bash(gh pr checkout:*)",
       "Bash(gh pr diff:*)",
       "Bash(pnpm lint:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
       "mcp__serena__*",
       "Bash(obsidian-doc-sync:*)"
     ],
