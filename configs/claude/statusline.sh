@@ -137,7 +137,7 @@ main() {
     five_color=$(get_5h_color "$five_pct")
     seven_color=$(get_7d_color "$seven_pct")
 
-    printf "\033[0m\033[38;5;%dm󰚩 %s\033[0m \033[38;5;%dm %s%%\033[0m \033[38;5;%dm󰔛 %s%%\033[38;5;246m ↺%s\033[0m \033[38;5;%dm󰃭 %s%%\033[38;5;246m ↺%s\033[0m\n" \
+    printf "\033[0m\033[38;5;%dm󰚩 %s\033[0m \033[38;5;%dm %s%%\033[0m \033[38;5;%dm󰔛 %s%%\033[38;5;243m ↺\033[38;5;246m%s\033[0m \033[38;5;%dm󰃭 %s%%\033[38;5;243m ↺\033[38;5;246m%s\033[0m\n" \
       "$model_color" "$model_name" "$percent_color" "$used_pct" \
       "$five_color" "$five_pct" "$five_cd" \
       "$seven_color" "$seven_pct" "$seven_cd"
