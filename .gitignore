@@ -10,7 +10,7 @@ configs/iterm2
 # Claude Code generated files
 configs/claude/.claude.json*
 configs/claude/history.jsonl
-configs/claude/stats-cache.json
+configs/claude/*cache*
 configs/claude/ide/
 configs/claude/projects/
 configs/claude/statsig/
