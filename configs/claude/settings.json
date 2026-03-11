@@ -33,7 +33,7 @@
       "Bash(chmod *)",
       "Bash(chown *)",
       "Bash(tar *)",
-      "Bash(gip *)",
+      "Bash(zip *)",
       "Bash(unzip *)",
       "Bash(gzip *)",
       "Bash(gunzip *)",
