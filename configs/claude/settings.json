@@ -67,6 +67,8 @@
       "Bash(pnpm lint *)",
       "WebFetch(domain:github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:zenn.dev)",
+      "WebFetch(domain:qiita.com)",
       "mcp__serena__*",
       "Bash(obsidian-doc-sync *)"
     ],
