@@ -120,6 +120,13 @@ main() {
   model_name=$(jq -r '.model.display_name' <<< "$input")
   used_pct=$(jq -r '.context_window.used_percentage // 0' <<< "$input")
 
+  # Git & changes
+  local cwd branch lines_added lines_removed
+  cwd=$(jq -r '.cwd // empty' <<< "$input")
+  branch=$(git -C "$cwd" symbolic-ref --short HEAD 2>/dev/null || git -C "$cwd" rev-parse --short HEAD 2>/dev/null)
+  lines_added=$(jq -r '.cost.total_lines_added // 0' <<< "$input")
+  lines_removed=$(jq -r '.cost.total_lines_removed // 0' <<< "$input")
+
   percent_color=$(get_context_color "$used_pct")
   model_color=$(get_model_color "$model_name")
 
@@ -144,6 +151,12 @@ main() {
   else
     printf "\033[0m\033[38;5;%dm󰚩 %s\033[0m \033[38;5;%dm %s%%\033[0m\n" \
       "$model_color" "$model_name" "$percent_color" "$used_pct"
+  fi
+
+  # Line 2: branch & changes
+  if [[ -n "$branch" ]]; then
+    printf "\033[38;5;246m %s\033[0m \033[38;5;246m \033[38;5;70m+%s\033[0m \033[38;5;167m-%s\033[0m\n" \
+      "$branch" "$lines_added" "$lines_removed"
   fi
 }
 
