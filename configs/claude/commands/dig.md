@@ -1,7 +1,7 @@
 ---
-name: investigate
+name: dig
 description: "調査を行い、結果を文書化する"
---- 
+---
 
 ## 目的
 
@@ -27,8 +27,6 @@ description: "調査を行い、結果を文書化する"
 以下のルールに従って変数を定義してください。
 
 - $TITLE: 調査結果を示す端的な日本語
-- $SLUG: 調査結果のファイル名に使用する端的な英語 (例: `user-authentication`)
-- $DOC_PATH: 調査結果のファイルを最終的に格納する予定の相対ディレクトリパス (例: `docs/features/auth`)
 
 #### b. 文書の雛形を作成
 
@@ -36,7 +34,7 @@ description: "調査を行い、結果を文書化する"
 作成に失敗した場合は絶対に何もせず、対応を中断してください。
 
 ```
-obsidian-doc-sync create "$TITLE" $SLUG $DOC_PATH
+obsidian-doc-sync create "$TITLE"
 ```
 
 #### c. 文書に調査結果を追記
