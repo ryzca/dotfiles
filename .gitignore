@@ -26,3 +26,4 @@ configs/claude/telemetry/
 configs/claude/backups/
 configs/claude/plans/
 configs/claude/plugins/
+configs/claude/sessions/
