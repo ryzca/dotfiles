@@ -27,3 +27,11 @@ configs/claude/backups/
 configs/claude/plans/
 configs/claude/plugins/
 configs/claude/sessions/
+configs/claude/session-env/
+configs/claude/teams/
+configs/claude/.last-cleanup
+configs/claude/.last-update-result.json
+configs/claude/mcp-needs-auth-cache.json
+
+# Claude Code skills (managed outside this repo)
+configs/claude/skills

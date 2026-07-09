@@ -101,5 +101,7 @@
     "command": "${CLAUDE_CONFIG_DIR}/statusline.sh"
   },
   "alwaysThinkingEnabled": true,
-  "effortLevel": "high"
+  "effortLevel": "high",
+  "tui": "default",
+  "preferredNotifChannel": "terminal_bell"
 }
