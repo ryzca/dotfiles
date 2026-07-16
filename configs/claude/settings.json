@@ -96,12 +96,15 @@
       "Bash(mongod *)"
     ]
   },
+  "model": "opus[1m]",
   "statusLine": {
     "type": "command",
     "command": "${CLAUDE_CONFIG_DIR}/statusline.sh"
   },
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
+  "remoteControlAtStartup": true,
+  "agentPushNotifEnabled": true,
   "tui": "default",
   "preferredNotifChannel": "terminal_bell",
   "defaultMode": "auto"
