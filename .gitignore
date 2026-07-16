@@ -29,6 +29,8 @@ configs/claude/plugins/
 configs/claude/sessions/
 configs/claude/session-env/
 configs/claude/teams/
+configs/claude/daemon/
+configs/claude/jobs/
 configs/claude/.last-cleanup
 configs/claude/.last-update-result.json
 configs/claude/mcp-needs-auth-cache.json
