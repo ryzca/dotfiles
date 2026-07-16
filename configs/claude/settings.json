@@ -103,5 +103,6 @@
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
   "tui": "default",
-  "preferredNotifChannel": "terminal_bell"
+  "preferredNotifChannel": "terminal_bell",
+  "defaultMode": "auto"
 }
