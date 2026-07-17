@@ -1,5 +1,48 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "agentPushNotifEnabled": true,
+  "alwaysThinkingEnabled": true,
+  "defaultMode": "auto",
+  "effortLevel": "high",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "bash \"${CLAUDE_CONFIG_DIR:-$HOME/.config/claude}/hooks/herdr-agent-state.sh\" session",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "command": "bash \"${CLAUDE_CONFIG_DIR:-$HOME/.config/claude}/hooks/herdr-pane-title.sh\" sync",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "command": "bash \"${CLAUDE_CONFIG_DIR:-$HOME/.config/claude}/hooks/herdr-pane-title.sh\" clear",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ]
+  },
+  "model": "claude-fable-5[1m]",
   "permissions": {
     "allow": [
       "Read",
@@ -96,16 +139,10 @@
       "Bash(mongod *)"
     ]
   },
-  "model": "opus[1m]",
-  "statusLine": {
-    "type": "command",
-    "command": "${CLAUDE_CONFIG_DIR}/statusline.sh"
-  },
-  "alwaysThinkingEnabled": true,
-  "effortLevel": "high",
-  "remoteControlAtStartup": true,
-  "agentPushNotifEnabled": true,
-  "tui": "default",
   "preferredNotifChannel": "terminal_bell",
-  "defaultMode": "auto"
+  "statusLine": {
+    "command": "${CLAUDE_CONFIG_DIR}/statusline.sh",
+    "type": "command"
+  },
+  "tui": "default"
 }
