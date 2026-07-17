@@ -95,6 +95,7 @@ zpcompinit
 source "${ZDOTDIR:-$HOME}/conf.d/completions.zsh"
 source "${ZDOTDIR:-$HOME}/conf.d/fzf.zsh"
 source "${ZDOTDIR:-$HOME}/conf.d/tmux.zsh"
+source "${ZDOTDIR:-$HOME}/conf.d/herdr.zsh"
 source "${ZDOTDIR:-$HOME}/conf.d/utils.zsh"
 
 autoload -Uz chpwd_recent_dirs cdr add-zsh-hook

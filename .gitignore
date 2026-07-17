@@ -37,3 +37,9 @@ configs/claude/mcp-needs-auth-cache.json
 
 # Claude Code skills (managed outside this repo)
 configs/claude/skills
+
+# herdr runtime files
+configs/herdr/*.log
+configs/herdr/*.sock
+configs/herdr/session.json
+configs/herdr/sessions/

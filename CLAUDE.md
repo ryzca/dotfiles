@@ -20,7 +20,7 @@ Each installation:
 ## Commands
 
 ```bash
-# Install everything (homebrew, zsh, git, vim, mise, ghostty, tmux)
+# Install everything (homebrew, zsh, git, vim, mise, ghostty, tmux, herdr)
 make all
 
 # Install individual components
@@ -31,6 +31,7 @@ make vim       # Configure Vim
 make mise      # Install and configure mise (development environment manager)
 make ghostty   # Configure Ghostty terminal emulator
 make tmux      # Configure tmux terminal multiplexer
+make herdr     # Configure herdr agent multiplexer
 make misc      # Miscellaneous configurations (bat, directories, XDG setup)
 
 # Installation always creates backups and logs
@@ -68,6 +69,7 @@ The installation creates the following development directories:
 - **eza**: Modern ls replacement with icons
 - **Ghostty**: Fast GPU-accelerated terminal emulator
 - **tmux**: Terminal multiplexer with custom configuration
+- **herdr**: Agent multiplexer replacing tmux (functions: h/hw/hk/hl/hs in `configs/zsh/conf.d/herdr.zsh`)
 - **iTerm2**: Configuration profiles included (JSON and plist)
 
 ## Development Notes

@@ -7,7 +7,7 @@ endef
 none:
 	@echo "Please specify one or more targets."
 
-all: homebrew zsh git vim mise ghostty tmux
+all: homebrew zsh git vim mise ghostty tmux herdr
 
 homebrew:
 	$(call run,homebrew)
@@ -30,10 +30,13 @@ ghostty:
 tmux:
 	$(call run,tmux)
 
+herdr:
+	$(call run,herdr)
+
 claude:
 	$(call run,claude)
 
 misc:
 	$(call run,misc)
 
-.PHONY: all homebrew zsh git vim mise ghostty tmux
+.PHONY: all homebrew zsh git vim mise ghostty tmux herdr
