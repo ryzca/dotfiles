@@ -43,3 +43,4 @@ configs/herdr/*.log
 configs/herdr/*.sock
 configs/herdr/session.json
 configs/herdr/sessions/
+configs/herdr/release-notes.json
