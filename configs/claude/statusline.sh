@@ -1,9 +1,12 @@
 #!/bin/bash
 
+# レア度順 (gray < green < blue < purple < gold) をモデルのティアに対応させる
 get_model_color() {
   case "$1" in
-    *Opus*) echo 172 ;; # orange
+    *Fable* | *Mythos*) echo 214 ;; # gold
+    *Opus*) echo 135 ;; # purple
     *Sonnet*) echo 111 ;; # blue
+    *Haiku*) echo 114 ;; # green
     *) echo 246 ;; # gray
   esac
 }
