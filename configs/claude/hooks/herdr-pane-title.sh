@@ -18,8 +18,9 @@ command -v jq >/dev/null 2>&1 || exit 0
 
 case "$action" in
   sync)
+    # Stop fires before Claude Code drops the spinner from the title.
     title="$(herdr pane get "$HERDR_PANE_ID" 2>/dev/null |
-      jq -r '.result.pane.terminal_title_stripped // empty')"
+      jq -r '.result.pane.terminal_title_stripped // empty | sub("^[\\p{S}\\p{Z}\\s]+";"")')"
     [ -n "$title" ] || exit 0
     # generic title before the session gets a real one: nothing to show
     [ "$title" = "Claude Code" ] && exit 0
