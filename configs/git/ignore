@@ -29,5 +29,7 @@ tmp/
 
 # Claude Code
 **/.claude/settings.local.json
+**/.claude/worktrees/
+**/.claude/agent-logs/
 _docs/
 .serena
