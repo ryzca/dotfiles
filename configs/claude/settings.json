@@ -96,6 +96,7 @@
       "Bash(mongod *)"
     ]
   },
+  "model": "opus[1m]",
   "hooks": {
     "SessionStart": [
       {
@@ -143,6 +144,5 @@
   "tui": "default",
   "preferredNotifChannel": "terminal_bell",
   "agentPushNotifEnabled": true,
-  "defaultMode": "auto",
-  "model": "claude-fable-5[1m]"
+  "defaultMode": "auto"
 }
