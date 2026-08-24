@@ -33,6 +33,7 @@ configs/claude/daemon/
 configs/claude/jobs/
 configs/claude/.last-cleanup
 configs/claude/.last-update-result.json
+configs/claude/.credentials.json
 configs/claude/mcp-needs-auth-cache.json
 
 # Claude Code skills (managed outside this repo)
