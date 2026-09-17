@@ -144,5 +144,6 @@
   "tui": "default",
   "preferredNotifChannel": "terminal_bell",
   "agentPushNotifEnabled": true,
-  "defaultMode": "auto"
+  "defaultMode": "auto",
+  "cleanupPeriodDays": 180
 }
